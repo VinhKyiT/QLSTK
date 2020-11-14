@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".HomeFragment">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_500"
+        android:minHeight="150dp"
+        android:gravity="center">
+
+        <RelativeLayout
+            android:layout_width="350dp"
+            android:layout_height="80dp"
+            android:background="@drawable/button_shape_white">
+
+            <TextView
+                android:id="@+id/tvTTTK"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tổng tiền tiết kiệm"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:paddingStart="10dp"
+                android:paddingEnd="0dp"
+                android:paddingTop="10dp"/>
+
+            <TextView
+                android:id="@+id/tvSoTien"
+                android:layout_below="@id/tvTTTK"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="100.000 VNĐ"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:paddingStart="10dp"
+                android:paddingEnd="0dp"
+                android:paddingTop="5dp"/>
+
+            <com.blogspot.atifsoftwares.circularimageview.CircularImageView
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_user"
+                android:layout_marginEnd="10dp"
+                app:c_border_color="@color/purple_500"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/container1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="0dp"
+        android:layout_below="@id/header">
+
+        <TextView
+            android:id="@+id/tvTKCT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tiết kiệm của tôi"
+            android:textStyle="bold"
+            android:textSize="17sp"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/myList"
+            android:layout_below="@id/tvTKCT"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
