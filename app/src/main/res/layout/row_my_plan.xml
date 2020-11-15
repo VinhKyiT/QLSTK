@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="3dp"
+    app:cardUseCompatPadding="true"
+    app:contentPadding="5dp"
+    app:cardBackgroundColor="#fff">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/planTypeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LOẠI GÓI GỬI"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/planNameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tên gói gửi"
+            android:layout_below="@+id/planTypeTv"
+            android:textStyle="bold"/>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/planNameTv"
+            android:layout_centerHorizontal="true">
+
+            <ProgressBar
+                android:id="@+id/planProgressPb"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerHorizontal="true"
+                android:indeterminateOnly="false"
+                android:progressDrawable="@drawable/circle_progress"
+                android:paddingTop="10dp"
+                tools:progress="20"
+                android:layout_gravity="center"/>
+            <TextView
+                android:id="@+id/planProgressTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:paddingTop="10dp"
+                android:text="100%"
+                android:layout_gravity="center"/>
+        </FrameLayout>
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
