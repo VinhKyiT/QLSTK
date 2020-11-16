@@ -55,6 +55,7 @@ public class HomeFragment extends Fragment {
         ArrayList<ModelMyPlan> myPlans = new ArrayList<>();
         myPlans.add(new ModelMyPlan("Gói của tôi", "Ăn uống", "60"));
 
+        list.add(new ModelCategory("Gói của tôi", myPlans));
         return list;
     }
 }

@@ -1,14 +1,256 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#DDD"
     tools:context=".ProfileFragment">
 
+    <RelativeLayout
+        android:id="@+id/profileHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="70dp"
+        android:background="#fff">
+
+        <ImageView
+            android:id="@+id/avtIv"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/ic_user"
+            android:padding="2dp"/>
+
+        <TextView
+            android:id="@+id/nameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Họ và tên"
+            android:layout_toRightOf="@+id/avtIv"
+            android:paddingTop="5dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0987654321"
+            android:layout_toRightOf="@+id/avtIv"
+            android:layout_below="@+id/nameTv"
+            android:paddingTop="5dp"
+            android:textColor="@color/black"/>
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_exit"
+            android:layout_centerVertical="true"
+            android:paddingEnd="10dp"
+            android:paddingStart="0dp"/>
+    </RelativeLayout>
     <TextView
+        android:id="@+id/caNhanTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="Profile Fragment" />
+        android:paddingStart="20dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="0dp"
+        android:text="Cá nhân"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="40dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:background="#fff">
 
-</RelativeLayout>
+        <ImageView
+            android:id="@+id/profileIv"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_profile"
+            android:layout_centerVertical="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thông tin cá nhân"
+            android:textStyle="bold"
+            android:layout_toRightOf="@id/profileIv"
+            android:textColor="@color/black"
+            android:paddingLeft="10dp"
+            android:layout_centerVertical="true"/>
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_right_arrow"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="40dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:background="#fff">
+
+        <ImageView
+            android:id="@+id/keyIv"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_key"
+            android:layout_centerVertical="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thay đổi mật khẩu"
+            android:textStyle="bold"
+            android:layout_toRightOf="@id/keyIv"
+            android:textColor="@color/black"
+            android:paddingLeft="10dp"
+            android:layout_centerVertical="true"/>
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_right_arrow"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/chungTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="20dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="0dp"
+        android:text="Chung"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="40dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:background="#fff">
+
+        <ImageView
+            android:id="@+id/policyIv"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_policy"
+            android:layout_centerVertical="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chính sách sử dụng &amp; bảo mật"
+            android:textStyle="bold"
+            android:layout_toRightOf="@id/policyIv"
+            android:textColor="@color/black"
+            android:paddingLeft="10dp"
+            android:layout_centerVertical="true"/>
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_right_arrow"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="40dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:background="#fff">
+
+        <ImageView
+            android:id="@+id/questionIv"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_help"
+            android:layout_centerVertical="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Câu hỏi thường gặp"
+            android:textStyle="bold"
+            android:layout_toRightOf="@id/questionIv"
+            android:textColor="@color/black"
+            android:paddingLeft="10dp"
+            android:layout_centerVertical="true"/>
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_right_arrow"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="40dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:background="#fff">
+
+        <ImageView
+            android:id="@+id/contactIv"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_contact"
+            android:layout_centerVertical="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Liên hệ hỗ trợ"
+            android:textStyle="bold"
+            android:layout_toRightOf="@id/contactIv"
+            android:textColor="@color/black"
+            android:paddingLeft="10dp"
+            android:layout_centerVertical="true"/>
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_right_arrow"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="40dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:background="#fff">
+
+        <ImageView
+            android:id="@+id/shareIv"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_share"
+            android:layout_centerVertical="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Giới thiệu bạn bè"
+            android:textStyle="bold"
+            android:layout_toRightOf="@id/shareIv"
+            android:textColor="@color/black"
+            android:paddingLeft="10dp"
+            android:layout_centerVertical="true"/>
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_right_arrow"/>
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/versionTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="20dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="0dp"
+        android:text="Phiên bản 1.0.0"/>
+</LinearLayout>
