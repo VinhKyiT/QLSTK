@@ -5,8 +5,31 @@
     android:layout_height="match_parent"
     tools:context=".PromoFragment">
 
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="THÔNG TIN ƯU ĐÃI"/>
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TRÒ CHƠI"/>
+    </com.google.android.material.tabs.TabLayout>
 
-<TextView
-    android:layout_width="match_parent"
-    android:layout_height=""/>
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="false">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView_2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/tabLayout_2"/>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
 </RelativeLayout>

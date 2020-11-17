@@ -4,7 +4,96 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity">
+    tools:context=".LoginActivity"
+    android:background="#d50628">
 
 
+    <TextView
+        android:id="@+id/tvBanner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="148dp"
+        android:layout_marginEnd="152dp"
+        android:text="VP BANK"
+        android:textColor="#f8f8f8"
+        android:textSize="40dp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/relative_Login"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@+id/tvBanner">
+        <ImageView
+            android:id="@+id/imv_1"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_user_name"/>
+        <EditText
+            android:id="@+id/edt_Login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="75dp"
+            android:hint="Ten dang nhap / So dien thoai"
+            android:textSize="20dp"
+            android:textColor="#f8f8f8"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/relative_Pass"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@+id/relative_Login">
+        <ImageView
+            android:id="@+id/imv_2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_key"/>
+        <EditText
+            android:id="@+id/edt_Pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="75dp"
+            android:hint="Mat khau"
+            android:textSize="20dp"
+            android:textColor="#f8f8f8"/>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_Login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="385dp"
+        android:layout_marginEnd="128dp"
+        android:background=""
+        android:text="Dang nhap"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+    <Button
+        android:id="@+id/btn_DangKi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="470dp"
+        android:layout_marginEnd="250dp"
+        android:background=""
+        android:text="Dang ky"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+    <Button
+        android:id="@+id/btn_QuenMatKhau"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="470dp"
+        android:layout_marginEnd="10dp"
+        android:background=""
+        android:text="Quen mat khau"
+        android:textSize="20dp"
+        android:textStyle="bold" />
 </RelativeLayout>
