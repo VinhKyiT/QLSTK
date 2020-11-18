@@ -1,99 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity"
-    android:background="#d50628">
+    android:orientation="vertical"
+    tools:context=".LoginActivity">
 
-
-    <TextView
-        android:id="@+id/tvBanner"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="148dp"
-        android:layout_marginEnd="152dp"
-        android:text="VP BANK"
-        android:textColor="#f8f8f8"
-        android:textSize="40dp"
-        android:textStyle="bold" />
-
-    <RelativeLayout
-        android:id="@+id/relative_Login"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:layout_below="@+id/tvBanner">
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="horizontal">
+
         <ImageView
-            android:id="@+id/imv_1"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:src="@drawable/ic_user_name"/>
-        <EditText
-            android:id="@+id/edt_Login"
+            android:id="@+id/GoBackIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_back_black_24dp"/>
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="75dp"
-            android:hint="Ten dang nhap / So dien thoai"
-            android:textSize="20dp"
-            android:textColor="#f8f8f8"/>
-    </RelativeLayout>
-    <RelativeLayout
-        android:id="@+id/relative_Pass"
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:layout_below="@+id/relative_Login">
-        <ImageView
-            android:id="@+id/imv_2"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:src="@drawable/ic_key"/>
-        <EditText
-            android:id="@+id/edt_Pass"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="75dp"
-            android:hint="Mat khau"
-            android:textSize="20dp"
-            android:textColor="#f8f8f8"/>
-    </RelativeLayout>
+            android:text="Sign Up"
+            android:gravity="end"
+            android:textColor="@color/blackcolor"
+            android:textSize="15dp"/>
 
-    <Button
-        android:id="@+id/btn_Login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="385dp"
-        android:layout_marginEnd="128dp"
-        android:background=""
-        android:text="Dang nhap"
-        android:textSize="20dp"
-        android:textStyle="bold" />
-    <Button
-        android:id="@+id/btn_DangKi"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="470dp"
-        android:layout_marginEnd="250dp"
-        android:background=""
-        android:text="Dang ky"
-        android:textSize="20dp"
-        android:textStyle="bold" />
-    <Button
-        android:id="@+id/btn_QuenMatKhau"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="470dp"
-        android:layout_marginEnd="10dp"
-        android:background=""
-        android:text="Quen mat khau"
-        android:textSize="20dp"
-        android:textStyle="bold" />
-</RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Log In"
+            android:layout_gravity="center"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="@color/blackcolor"
+            android:textSize="25dp"
+            android:textStyle="bold"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/img"
+            android:layout_marginTop="40dp">
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/ic_face_black_24dp"
+                />
+        </LinearLayout>
+        <EditText
+            android:layout_width="350dp"
+            android:layout_height="45dp"
+            android:hint="Username"
+            android:elevation="5dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:paddingLeft="15dp"
+            android:inputType="textEmailAddress"
+            android:background="@drawable/btn"/>
+
+        <EditText
+            android:layout_width="355dp"
+            android:layout_height="41dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn"
+            android:elevation="5dp"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:paddingLeft="15dp" />
+        <EditText
+            android:layout_width="350dp"
+            android:layout_height="45dp"
+            android:hint="Password"
+            android:elevation="5dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="15dp"
+            android:inputType="textPassword"
+            android:background="@drawable/btn"/>
+        <Button
+            android:layout_width="350dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:text="Log In"
+            android:textAllCaps="false"
+            android:background="@drawable/joinbtn"
+            android:textColor="@color/whitecolor"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="No account! Register?"
+            android:textColor="@color/fullwhite"
+            android:layout_marginTop="25dp"/>
+    </LinearLayout>
+</LinearLayout>

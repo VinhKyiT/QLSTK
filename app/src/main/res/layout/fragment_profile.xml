@@ -26,7 +26,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Họ và tên"
-            android:layout_toRightOf="@+id/avtIv"
+            android:layout_toEndOf="@+id/avtIv"
             android:paddingTop="5dp"
             android:textSize="20sp"
             android:textStyle="bold"
@@ -35,7 +35,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="0987654321"
-            android:layout_toRightOf="@+id/avtIv"
+            android:layout_toEndOf="@+id/avtIv"
             android:layout_below="@+id/nameTv"
             android:paddingTop="5dp"
             android:textColor="@color/black"/>
@@ -75,14 +75,14 @@
             android:layout_height="wrap_content"
             android:text="Thông tin cá nhân"
             android:textStyle="bold"
-            android:layout_toRightOf="@id/profileIv"
+            android:layout_toEndOf="@id/profileIv"
             android:textColor="@color/black"
             android:paddingLeft="10dp"
             android:layout_centerVertical="true"/>
         <ImageView
             android:layout_width="20dp"
             android:layout_height="20dp"
-            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
             android:src="@drawable/ic_right_arrow"/>
     </RelativeLayout>
@@ -105,14 +105,14 @@
             android:layout_height="wrap_content"
             android:text="Thay đổi mật khẩu"
             android:textStyle="bold"
-            android:layout_toRightOf="@id/keyIv"
+            android:layout_toEndOf="@id/keyIv"
             android:textColor="@color/black"
             android:paddingLeft="10dp"
             android:layout_centerVertical="true"/>
         <ImageView
             android:layout_width="20dp"
             android:layout_height="20dp"
-            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
             android:src="@drawable/ic_right_arrow"/>
     </RelativeLayout>
@@ -144,14 +144,14 @@
             android:layout_height="wrap_content"
             android:text="Chính sách sử dụng &amp; bảo mật"
             android:textStyle="bold"
-            android:layout_toRightOf="@id/policyIv"
+            android:layout_toEndOf="@id/policyIv"
             android:textColor="@color/black"
             android:paddingLeft="10dp"
             android:layout_centerVertical="true"/>
         <ImageView
             android:layout_width="20dp"
             android:layout_height="20dp"
-            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
             android:src="@drawable/ic_right_arrow"/>
     </RelativeLayout>
@@ -174,14 +174,14 @@
             android:layout_height="wrap_content"
             android:text="Câu hỏi thường gặp"
             android:textStyle="bold"
-            android:layout_toRightOf="@id/questionIv"
+            android:layout_toEndOf="@id/questionIv"
             android:textColor="@color/black"
             android:paddingLeft="10dp"
             android:layout_centerVertical="true"/>
         <ImageView
             android:layout_width="20dp"
             android:layout_height="20dp"
-            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
             android:src="@drawable/ic_right_arrow"/>
     </RelativeLayout>
@@ -204,14 +204,14 @@
             android:layout_height="wrap_content"
             android:text="Liên hệ hỗ trợ"
             android:textStyle="bold"
-            android:layout_toRightOf="@id/contactIv"
+            android:layout_toEndOf="@id/contactIv"
             android:textColor="@color/black"
             android:paddingLeft="10dp"
             android:layout_centerVertical="true"/>
         <ImageView
             android:layout_width="20dp"
             android:layout_height="20dp"
-            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
             android:src="@drawable/ic_right_arrow"/>
     </RelativeLayout>
@@ -234,14 +234,14 @@
             android:layout_height="wrap_content"
             android:text="Giới thiệu bạn bè"
             android:textStyle="bold"
-            android:layout_toRightOf="@id/shareIv"
+            android:layout_toEndOf="@id/shareIv"
             android:textColor="@color/black"
             android:paddingLeft="10dp"
             android:layout_centerVertical="true"/>
         <ImageView
             android:layout_width="20dp"
             android:layout_height="20dp"
-            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
             android:src="@drawable/ic_right_arrow"/>
     </RelativeLayout>

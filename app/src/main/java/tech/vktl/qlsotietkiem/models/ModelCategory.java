@@ -1,19 +1,22 @@
 package tech.vktl.qlsotietkiem.models;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ModelCategory {
 
     private String cateName;
-    private ArrayList<ModelMyPlan> myPlanArrayList;
+    private List<ModelPlan> mPlanList;
+    private List<ModelMyPlan> myPlanList;
 
-    public ModelCategory(String cateName, ArrayList<ModelMyPlan> myPlanArrayList) {
+    public ModelCategory(String cateName, List<ModelPlan> mPlanList) {
         this.cateName = cateName;
-        this.myPlanArrayList = myPlanArrayList;
+        this.mPlanList = mPlanList;
     }
 
     public ModelCategory() {
     }
+
 
     public String getCateName() {
         return cateName;
@@ -23,11 +26,11 @@ public class ModelCategory {
         this.cateName = cateName;
     }
 
-    public ArrayList<ModelMyPlan> getMyPlanArrayList() {
-        return myPlanArrayList;
+    public List<ModelPlan> getPlanList() {
+        return mPlanList;
     }
 
-    public void setMyPlanArrayList(ArrayList<ModelMyPlan> myPlanArrayList) {
-        this.myPlanArrayList = myPlanArrayList;
+    public void setMyPlanList(List<ModelPlan> mPlanList) {
+        this.mPlanList = mPlanList;
     }
 }

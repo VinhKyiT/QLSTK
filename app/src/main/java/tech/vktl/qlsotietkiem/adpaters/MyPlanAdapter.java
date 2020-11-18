@@ -13,17 +13,17 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import org.w3c.dom.Text;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import tech.vktl.qlsotietkiem.R;
 import tech.vktl.qlsotietkiem.models.ModelMyPlan;
 
 public class MyPlanAdapter extends RecyclerView.Adapter<MyPlanAdapter.MyHolder> {
 
-    ArrayList<ModelMyPlan> myPlanList;
+    List<ModelMyPlan> myPlanList;
     Context context;
 
-    public MyPlanAdapter(Context context, ArrayList<ModelMyPlan> myPlanList){
+    public MyPlanAdapter(Context context, List<ModelMyPlan> myPlanList){
         this.context = context;
         this.myPlanList = myPlanList;
     }
@@ -32,7 +32,7 @@ public class MyPlanAdapter extends RecyclerView.Adapter<MyPlanAdapter.MyHolder> 
 
     }
 
-    public void setData(ArrayList<ModelMyPlan> myPlanList){
+    public void setData(List<ModelMyPlan> myPlanList){
         this.myPlanList = myPlanList;
         notifyDataSetChanged();
     }
@@ -46,12 +46,22 @@ public class MyPlanAdapter extends RecyclerView.Adapter<MyPlanAdapter.MyHolder> 
 
     @Override
     public void onBindViewHolder(@NonNull MyHolder holder, int position) {
-
+        ModelMyPlan modelMyPlan = myPlanList.get(position);
+        if (modelMyPlan == null){
+            return;
+        }
+        holder.mPlanNameTv.setText(modelMyPlan.getPlanName());
+        holder.mPlanTypeTv.setText(modelMyPlan.getPlanType());
+        holder.mPlanProgressTv.setText(modelMyPlan.getPlanProgress());
+        holder.mPlanProgressPb.setProgress(Integer.parseInt(modelMyPlan.getPlanProgress()));
     }
 
     @Override
     public int getItemCount() {
-        return myPlanList.size();
+        if (myPlanList != null){
+            return myPlanList.size();
+        }
+        return 0;
     }
 
     class MyHolder extends RecyclerView.ViewHolder {
