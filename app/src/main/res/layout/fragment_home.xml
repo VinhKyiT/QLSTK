@@ -9,61 +9,67 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
-        <RelativeLayout
+        <FrameLayout
             android:id="@+id/header"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/purple_500"
-            android:minHeight="150dp"
-            android:gravity="center">
+            android:minHeight="150dp">
 
-            <RelativeLayout
-                android:layout_width="350dp"
-                android:layout_height="80dp"
-                android:background="@drawable/button_shape_white">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:background="@color/purple_500"/>
 
-                <TextView
-                    android:id="@+id/tvTTTK"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Tổng tiền tiết kiệm"
-                    android:textStyle="bold"
-                    android:textColor="@color/black"
-                    android:textSize="18sp"
-                    android:paddingStart="10dp"
-                    android:paddingEnd="0dp"
-                    android:paddingTop="10dp"/>
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+                <RelativeLayout
+                    android:layout_width="300dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/button_shape_white">
 
-                <TextView
-                    android:id="@+id/tvSoTien"
-                    android:layout_below="@id/tvTTTK"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="100.000 VNĐ"
-                    android:textColor="@color/black"
-                    android:textSize="20sp"
-                    android:paddingStart="10dp"
-                    android:paddingEnd="0dp"
-                    android:paddingTop="5dp"/>
+                    <TextView
+                        android:id="@+id/tvTTTK"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tổng tiền tiết kiệm"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="0dp"
+                        android:paddingTop="10dp"/>
 
-                <com.blogspot.atifsoftwares.circularimageview.CircularImageView
-                    android:layout_width="65dp"
-                    android:layout_height="65dp"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:src="@drawable/ic_user"
-                    android:layout_marginEnd="10dp"
-                    app:c_border_color="@color/purple_500"/>
-            </RelativeLayout>
-        </RelativeLayout>
+                    <TextView
+                        android:id="@+id/tvSoTien"
+                        android:layout_below="@id/tvTTTK"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="100.000 VNĐ"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="0dp"
+                        android:paddingTop="5dp"/>
+
+                    <com.blogspot.atifsoftwares.circularimageview.CircularImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_user"
+                        android:layout_marginEnd="10dp"
+                        app:c_border_color="@color/purple_500"/>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </FrameLayout>
         <TextView
             android:id="@+id/myPlanCountTv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Tiết kiệm của tôi (0)"
-            android:textColor="@color/black"
             android:paddingTop="5dp"
             android:paddingStart="10dp"
             android:paddingEnd="0dp"

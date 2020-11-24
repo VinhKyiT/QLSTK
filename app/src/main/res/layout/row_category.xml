@@ -12,7 +12,6 @@
         android:layout_height="wrap_content"
         android:text="Gói của tôi"
         android:textSize="18sp"
-        android:textColor="@color/black"
         android:textStyle="bold"/>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/categoryRecv"
