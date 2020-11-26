@@ -16,18 +16,21 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
         <ImageView
+            android:id="@+id/ivNotiImg"
             android:layout_width="wrap_content"
             android:layout_height="180dp"
             android:src="@drawable/img_hobbies"
             android:scaleType="centerCrop"/>
 
         <TextView
+            android:id="@+id/tvNotiTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Tên chương trình KM"
             android:textColor="@color/black"
             android:textStyle="bold"/>
         <TextView
+            android:id="@+id/tvNotiContent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Nội dung km"
