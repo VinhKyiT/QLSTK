@@ -3,6 +3,7 @@ package tech.vktl.qlsotietkiem;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
@@ -44,9 +45,12 @@ public class PromoDetailFragment extends Fragment {
         promos.add(new ModelPromo(R.drawable.img_future, "KM1", "Khuyến mãi 1"));
 
         promoRecv = view.findViewById(R.id.rcvPromoDetail);
-        adapter.setData(promos);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
+        //set layout vao recyclerview
+        promoRecv.setLayoutManager(linearLayoutManager);
+        adapter = new PromoAdapter(getActivity(), promos);
+        adapter.notifyDataSetChanged();
         String item = String.valueOf(adapter.getItemCount());
-        Toast.makeText(getContext(), ""+item, Toast.LENGTH_SHORT).show();
         promoRecv.setAdapter(adapter);
 
 
