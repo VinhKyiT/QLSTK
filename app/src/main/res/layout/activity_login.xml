@@ -55,6 +55,7 @@
                 />
         </LinearLayout>
         <EditText
+            android:id="@+id/edt_Username"
             android:layout_width="350dp"
             android:layout_height="45dp"
             android:hint="Username"
@@ -65,19 +66,11 @@
             android:inputType="textEmailAddress"
             android:background="@drawable/btn"/>
 
-        <EditText
-            android:layout_width="355dp"
-            android:layout_height="41dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/btn"
-            android:elevation="5dp"
-            android:hint="Email"
-            android:inputType="textEmailAddress"
-            android:paddingLeft="15dp" />
+
         <EditText
             android:layout_width="350dp"
             android:layout_height="45dp"
+            android:id="@+id/edt_Password"
             android:hint="Password"
             android:elevation="5dp"
             android:layout_gravity="center"
@@ -88,6 +81,7 @@
         <Button
             android:layout_width="350dp"
             android:layout_height="45dp"
+            android:id="@+id/btn_Login"
             android:layout_gravity="center"
             android:layout_marginTop="30dp"
             android:text="Log In"

@@ -48,7 +48,7 @@ public class HomeFragment extends Fragment {
 
         myPlans = new ArrayList<>();
         myPlans.add(new ModelMyPlan("Gói savy", "Ăn uống", "70"));
-        myPlans.add(new ModelMyPlan("Gói savy", "Ăn uống", "70"));
+        myPlans.add(new ModelMyPlan("Gói savy", "Ăn uống", "60"));
         myPlans.add(new ModelMyPlan("Gói savy", "Ăn uống", "70"));
         myPlans.add(new ModelMyPlan("Gói savy", "Ăn uống", "70"));
         myPlans.add(new ModelMyPlan("Gói savy", "Ăn uống", "70"));
