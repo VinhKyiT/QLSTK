@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/notiItemLinear"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content" android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:paddingTop="10dp"
+        android:layout_marginEnd="5dp">
+        <ImageView
+            android:id="@+id/readStatusIv"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:src="@drawable/ic_unread"
+            android:layout_centerVertical="true"/>
+        <TextView
+            android:id="@+id/notifiTitleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tiêu đề thông báo"
+            android:layout_toEndOf="@+id/readStatusIv"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:paddingStart="8dp"
+            android:paddingEnd="0dp"/>
+        <TextView
+            android:id="@+id/notifiDateTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="26/11/2020"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/notifiContentTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nội dung thông báo\nNội dung thông báo\nNội dung thông báo\nNội dung thông báo\nNội dung thông báo"
+        android:textColor="@color/black"
+        android:paddingStart="10dp"
+        android:paddingEnd="5dp"
+        android:paddingBottom="10dp"
+        android:maxLines="5"/>
+
+</LinearLayout>

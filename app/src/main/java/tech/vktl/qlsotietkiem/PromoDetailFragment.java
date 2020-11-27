@@ -49,8 +49,6 @@ public class PromoDetailFragment extends Fragment {
         //set layout vao recyclerview
         promoRecv.setLayoutManager(linearLayoutManager);
         adapter = new PromoAdapter(getActivity(), promos);
-        adapter.notifyDataSetChanged();
-        String item = String.valueOf(adapter.getItemCount());
         promoRecv.setAdapter(adapter);
 
 

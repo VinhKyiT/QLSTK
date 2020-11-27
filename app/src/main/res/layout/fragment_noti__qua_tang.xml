@@ -3,11 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PromoDetailFragment">
+    tools:context=".Noti_QuaTang">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rcvPromoDetail"
+    <TextView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:text="Không có thông báo!"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_centerInParent="true"/>
 
 </RelativeLayout>

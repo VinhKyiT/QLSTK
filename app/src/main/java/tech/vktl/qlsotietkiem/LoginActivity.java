@@ -28,14 +28,16 @@ public class LoginActivity extends AppCompatActivity {
     }
     public void Login(View view)
     {
-        if(edtUsername.getText().toString().equals("Admin") && edtPassword.getText().toString().equals("123456"))
+        if(edtUsername.getText().toString().toLowerCase().equals("admin") &&
+                edtPassword.getText().toString().equals("123123"))
         {
             Intent intent = new Intent(LoginActivity.this,MainActivity.class);
             startActivity(intent);
         }
         else
         {
-            Toast.makeText(this, "Sai thông tin tài khoản hoặc mật khẩu", Toast.LENGTH_SHORT).show();
+            CustomToast.makeText(LoginActivity.this, "Sai thông tin đăng nhập",
+                    CustomToast.LENGTH_SHORT, CustomToast.ERROR).show();
         }
     }
 }

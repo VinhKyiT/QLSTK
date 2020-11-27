@@ -8,6 +8,7 @@ import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -18,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
     ViewPager containerVP;
     BottomNavigationView navigationView;
     ActionBar actionBar;
+    Toast mToast;
+    private long backPressTime;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +41,18 @@ public class MainActivity extends AppCompatActivity {
         containerVP.setCurrentItem(0);
 
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (backPressTime + 2000 > System.currentTimeMillis()){
+            mToast.cancel();
+            super.onBackPressed();
+        }else {
+           mToast = CustomToast.makeText(this, "Nhấn 1 lần nữa để thoát", CustomToast.LENGTH_SHORT, CustomToast.WARNING);
+           mToast.show();
+        }
+        backPressTime = System.currentTimeMillis();
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener selectedListener = new BottomNavigationView.OnNavigationItemSelectedListener() {

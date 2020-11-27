@@ -25,11 +25,6 @@ public class PromoAdapter extends RecyclerView.Adapter<PromoAdapter.PromoHolder>
         this.promoList = promoList;
     }
 
-    public void setData(List<ModelPromo> promoList){
-        this.promoList = promoList;
-        notifyDataSetChanged();
-    }
-
     @NonNull
     @Override
     public PromoHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {

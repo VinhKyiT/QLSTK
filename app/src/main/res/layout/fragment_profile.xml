@@ -57,6 +57,7 @@
         android:paddingEnd="0dp"
         android:text="Cá nhân"/>
     <RelativeLayout
+        android:id="@+id/accountInfo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:minHeight="40dp"
@@ -87,6 +88,7 @@
             android:src="@drawable/ic_right_arrow"/>
     </RelativeLayout>
     <RelativeLayout
+        android:id="@+id/changePassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:minHeight="40dp"
