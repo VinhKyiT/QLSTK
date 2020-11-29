@@ -1,5 +1,6 @@
 package tech.vktl.qlsotietkiem.adpaters;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,9 +18,18 @@ import tech.vktl.qlsotietkiem.models.ModelPlan;
 public class PlanAdapter extends RecyclerView.Adapter<PlanAdapter.PlanViewHolder> {
 
     private List<ModelPlan> mPlans;
+    private Context context;
     public void setData(List<ModelPlan> mPlans){
         this.mPlans = mPlans;
         notifyDataSetChanged();
+    }
+
+    public PlanAdapter() {
+    }
+
+    public PlanAdapter(Context context, List<ModelPlan> mPlans) {
+        this.context = context;
+        this.mPlans = mPlans;
     }
 
     @NonNull

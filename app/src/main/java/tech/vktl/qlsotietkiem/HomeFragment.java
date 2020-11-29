@@ -96,8 +96,6 @@ public class HomeFragment extends Fragment {
 
         listCategory.add(new ModelCategory("Tạo gói gửi góp", mPlans));
         listCategory.add(new ModelCategory("Tạo gói TK thời hạn", mPlans1));
-        listCategory.add(new ModelCategory("Tạo gói TK thời hạn", mPlans1));
-        listCategory.add(new ModelCategory("Tạo gói TK thời hạn", mPlans1));
         return listCategory;
     }
 }
