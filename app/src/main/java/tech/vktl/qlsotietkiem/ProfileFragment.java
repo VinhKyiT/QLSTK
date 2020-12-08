@@ -38,10 +38,10 @@ import tech.vktl.qlsotietkiem.models.ModelUser;
 public class ProfileFragment extends Fragment {
 
     TextView mNameTv, mPhoneTv;
-    ImageView mAvtIv;
+    ImageView mAvtIv, mBtnLogout;
 
     List<ModelUser> users;
-
+    String idUser;
     RelativeLayout accountInfo, changePassword;
 
     public ProfileFragment() {
@@ -65,11 +65,13 @@ public class ProfileFragment extends Fragment {
         mNameTv = view.findViewById(R.id.nameTv);
         mPhoneTv = view.findViewById(R.id.phoneTv);
         mAvtIv = view.findViewById(R.id.avtIv);
+        mBtnLogout = view.findViewById(R.id.btnLogout);
 
         accountInfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), AccountInfoAct.class);
+                intent.putExtra("idUser", idUser);
                 startActivity(intent);
             }
         });
@@ -82,11 +84,18 @@ public class ProfileFragment extends Fragment {
             }
         });
 
+        mBtnLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), LoginActivity.class));
+            }
+        });
+
         MainActivity mainActivity = (MainActivity) getActivity();
         assert mainActivity != null;
-        String id = mainActivity.getMyId();
+        idUser = mainActivity.getMyId();
 
-        loadUserInfo(id);
+        loadUserInfo(idUser);
 
         return view;
     }
@@ -109,19 +118,23 @@ public class ProfileFragment extends Fragment {
                         String tel = userObj.getString("dienthoai");
                         String address = userObj.getString("diachi");
                         String imageProfile = userObj.getString("imageProfile");
-                        if (idUser.equals(id)){
-                            users.add(new ModelUser(id, user, pass, rights, name, tel, address, imageProfile));
+                        if (!idUser.equals("none")){
+                            if (idUser.equals(id)){
+                                users.add(new ModelUser(id, user, pass, rights, name, tel, address, imageProfile));
+                            }
                         }
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
                 }
-                mNameTv.setText(users.get(0).getHoten());
-                mPhoneTv.setText(users.get(0).getDienthoai());
-                try {
-                    Picasso.get().load(users.get(0).getImageProfile()).placeholder(R.drawable.ic_user).into(mAvtIv);
-                }catch (Exception e){
-                    Picasso.get().load(R.drawable.ic_user).into(mAvtIv);
+                if (users.size() != 0){
+                    mNameTv.setText(users.get(0).getHoten());
+                    mPhoneTv.setText(users.get(0).getDienthoai());
+                    try {
+                        Picasso.get().load(users.get(0).getImageProfile()).placeholder(R.drawable.ic_user).into(mAvtIv);
+                    }catch (Exception e){
+                        Picasso.get().load(R.drawable.ic_user).into(mAvtIv);
+                    }
                 }
             }
         }, new Response.ErrorListener() {

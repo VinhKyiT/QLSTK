@@ -4,8 +4,11 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.widget.TextView;
 
 public class AccountInfoAct extends AppCompatActivity {
+
+    TextView mNameTv, mPhoneTv, mAddressTv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -14,5 +17,11 @@ public class AccountInfoAct extends AppCompatActivity {
 
         ActionBar actionBar = getSupportActionBar();
         actionBar.setTitle("Thông tin tài khoản");
+
+        mNameTv = findViewById(R.id.nameTv);
+        mPhoneTv = findViewById(R.id.phoneTv);
+        mAddressTv = findViewById(R.id.addressTv);
+
+
     }
 }

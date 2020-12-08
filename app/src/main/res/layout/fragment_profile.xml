@@ -44,14 +44,16 @@
             android:layout_below="@+id/nameTv"
             android:paddingTop="5dp"
             android:textColor="@color/black"/>
+
         <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:id="@+id/btnLogout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:src="@drawable/ic_exit"
             android:layout_centerVertical="true"
+            android:paddingStart="0dp"
             android:paddingEnd="10dp"
-            android:paddingStart="0dp"/>
+            android:src="@drawable/ic_exit" />
     </RelativeLayout>
     <TextView
         android:id="@+id/caNhanTv"
