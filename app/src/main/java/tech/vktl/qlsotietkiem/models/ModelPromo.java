@@ -1,24 +1,15 @@
 package tech.vktl.qlsotietkiem.models;
 
 public class ModelPromo {
-    private int resourceId;
-    private String title, content;
-
-    public ModelPromo(int resourceId, String title, String content) {
-        this.resourceId = resourceId;
-        this.title = title;
-        this.content = content;
-    }
+    private String title, content, image;
 
     public ModelPromo() {
     }
 
-    public int getResourceId() {
-        return resourceId;
-    }
-
-    public void setResourceId(int resourceId) {
-        this.resourceId = resourceId;
+    public ModelPromo(String title, String content, String image) {
+        this.title = title;
+        this.content = content;
+        this.image = image;
     }
 
     public String getTitle() {
@@ -35,5 +26,13 @@ public class ModelPromo {
 
     public void setContent(String content) {
         this.content = content;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 }

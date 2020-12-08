@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Toast;
@@ -21,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     ActionBar actionBar;
     Toast mToast;
     private long backPressTime;
+    String id, imageProfile;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +42,9 @@ public class MainActivity extends AppCompatActivity {
         actionBar.setTitle("Trang chủ");
         containerVP.setCurrentItem(0);
 
-
+        Intent intent = getIntent();
+        id = intent.getStringExtra("id");
+        imageProfile = intent.getStringExtra("imageProfile");
     }
 
     @Override
@@ -121,5 +125,12 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    public String getMyId(){
+        return id;
+    }
+    public String getMyImage(){
+        return imageProfile;
     }
 }

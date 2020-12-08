@@ -10,6 +10,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.List;
 
 import tech.vktl.qlsotietkiem.R;
@@ -34,13 +36,13 @@ public class PromoAdapter extends RecyclerView.Adapter<PromoAdapter.PromoHolder>
 
     @Override
     public void onBindViewHolder(@NonNull PromoHolder holder, int position) {
-        int resId = promoList.get(position).getResourceId();
         String title = promoList.get(position).getTitle();
         String content = promoList.get(position).getContent();
+        String image = promoList.get(position).getImage();
 
-        holder.mImgV.setImageResource(resId);
         holder.mTvTitle.setText(title);
         holder.mTvContent.setText(content);
+        Picasso.get().load(image).placeholder(R.drawable.loading).into(holder.mImgV);
     }
 
     @Override

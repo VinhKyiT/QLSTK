@@ -9,7 +9,8 @@
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/containerVP"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:layout_above="@id/navigationView"/>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/navigationView"

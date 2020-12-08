@@ -55,6 +55,7 @@
                         android:paddingTop="5dp"/>
 
                     <com.blogspot.atifsoftwares.circularimageview.CircularImageView
+                        android:id="@+id/avtIv"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:layout_alignParentEnd="true"

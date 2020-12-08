@@ -9,7 +9,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,6 +30,7 @@ public class HomeFragment extends Fragment {
     private MyPlanAdapter myPlanAdapter;
     private List<ModelMyPlan> myPlans;
     private TextView myPlanCountTv;
+    private ImageView mAvtIv;
 
 
     public HomeFragment() {
@@ -55,10 +59,11 @@ public class HomeFragment extends Fragment {
 
         mPlanRecv = view.findViewById(R.id.mPlan);
         mMyPlan = view.findViewById(R.id.myPlan);
+        mAvtIv = view.findViewById(R.id.avtIv);
         myPlanCountTv = view.findViewById(R.id.myPlanCountTv);
+
         categoryAdapter = new CategoryAdapter(getContext());
         myPlanAdapter = new MyPlanAdapter(getContext(), myPlans);
-
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), RecyclerView.VERTICAL, false);
         LinearLayoutManager linearLayoutManager1 = new LinearLayoutManager(getContext(), RecyclerView.HORIZONTAL, false);
@@ -71,6 +76,15 @@ public class HomeFragment extends Fragment {
         mMyPlan.setAdapter(myPlanAdapter);
 
         myPlanCountTv.setText("Tiết kiệm của tôi ("+myPlans.size()+")");
+
+        MainActivity mainActivity = (MainActivity) getActivity();
+        assert mainActivity != null;
+        String image = mainActivity.getMyImage();
+        try {
+            Picasso.get().load(image).placeholder(R.drawable.ic_user).into(mAvtIv);
+        }catch (Exception e){
+            Picasso.get().load(R.drawable.ic_user).into(mAvtIv);
+        }
 
         return view;
     }
