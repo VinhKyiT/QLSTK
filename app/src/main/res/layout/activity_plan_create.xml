@@ -10,7 +10,8 @@
         android:id="@+id/planPicIv"
         android:layout_width="match_parent"
         android:layout_height="250dp"
-        android:background="#9F9B9B"/>
+        android:background="#9F9B9B"
+        android:scaleType="centerCrop"/>
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"

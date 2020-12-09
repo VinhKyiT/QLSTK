@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -12,6 +13,7 @@ import android.widget.Toast;
 public class ChangePasswordAct extends AppCompatActivity {
 
     Button mBtnChangePw;
+    Handler handler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +22,8 @@ public class ChangePasswordAct extends AppCompatActivity {
 
         ActionBar actionBar = getSupportActionBar();
         actionBar.setTitle("Đổi mật khẩu");
+        actionBar.setDisplayShowHomeEnabled(true);
+        actionBar.setDisplayHomeAsUpEnabled(true);
 
         mBtnChangePw = findViewById(R.id.btnChangePw);
 
@@ -27,9 +31,21 @@ public class ChangePasswordAct extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 CustomToast.makeText(getApplicationContext(), "Đổi mật khẩu thành công", Toast.LENGTH_SHORT, CustomToast.SUCCESS).show();
-                onBackPressed();
+                handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        onBackPressed();
+                    }
+                }, 2000);
             }
         });
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return super.onSupportNavigateUp();
     }
 
     @Override
