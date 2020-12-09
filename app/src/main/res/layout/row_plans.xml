@@ -8,7 +8,8 @@
     app:cardUseCompatPadding="true"
     android:paddingStart="5dp"
     android:paddingEnd="5dp"
-    app:cardBackgroundColor="#fff">
+    app:cardBackgroundColor="#fff"
+    android:id="@+id/itemPlan">
 
     <FrameLayout
         android:layout_width="match_parent"

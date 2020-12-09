@@ -2,11 +2,12 @@ package tech.vktl.qlsotietkiem.models;
 
 public class ModelUser {
     String id, username, password, rights, hoten, dienthoai, diachi, imageProfile;
+    double amount;
 
     public ModelUser() {
     }
 
-    public ModelUser(String id, String username, String password, String rights, String hoten, String dienthoai, String diachi, String imageProfile) {
+    public ModelUser(String id, String username, String password, String rights, String hoten, String dienthoai, String diachi, String imageProfile, double amount) {
         this.id = id;
         this.username = username;
         this.password = password;
@@ -15,6 +16,7 @@ public class ModelUser {
         this.dienthoai = dienthoai;
         this.diachi = diachi;
         this.imageProfile = imageProfile;
+        this.amount = amount;
     }
 
     public String getId() {
@@ -79,5 +81,13 @@ public class ModelUser {
 
     public void setImageProfile(String imageProfile) {
         this.imageProfile = imageProfile;
+    }
+
+    public double getAmount() {
+        return amount;
+    }
+
+    public void setAmount(double amount) {
+        this.amount = amount;
     }
 }

@@ -73,7 +73,8 @@ public class LoginActivity extends AppCompatActivity {
                                 String tel = userObj.getString("dienthoai");
                                 String address = userObj.getString("diachi");
                                 String imageProfile = userObj.getString("imageProfile");
-                                users.add(new ModelUser(id, user, pass, rights, name, tel, address, imageProfile));
+                                double amount = userObj.getDouble("amount");
+                                users.add(new ModelUser(id, user, pass, rights, name, tel, address, imageProfile, amount));
                             } catch (JSONException e) {
                                 e.printStackTrace();
                             }
@@ -85,6 +86,7 @@ public class LoginActivity extends AppCompatActivity {
                                 Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                                 intent.putExtra("imageProfile", users.get(i).getImageProfile());
                                 intent.putExtra("id", users.get(i).getId());
+                                intent.putExtra("amount", users.get(i).getAmount());
                                 startActivity(intent);
                                     break;
                                 }else

@@ -29,7 +29,7 @@ public class HomeFragment extends Fragment {
     private CategoryAdapter categoryAdapter;
     private MyPlanAdapter myPlanAdapter;
     private List<ModelMyPlan> myPlans;
-    private TextView myPlanCountTv;
+    private TextView myPlanCountTv, mTvSoTien;
     private ImageView mAvtIv;
 
 
@@ -61,6 +61,7 @@ public class HomeFragment extends Fragment {
         mMyPlan = view.findViewById(R.id.myPlan);
         mAvtIv = view.findViewById(R.id.avtIv);
         myPlanCountTv = view.findViewById(R.id.myPlanCountTv);
+        mTvSoTien = view.findViewById(R.id.tvSoTien);
 
         categoryAdapter = new CategoryAdapter(getContext());
         myPlanAdapter = new MyPlanAdapter(getContext(), myPlans);
@@ -80,6 +81,9 @@ public class HomeFragment extends Fragment {
         MainActivity mainActivity = (MainActivity) getActivity();
         assert mainActivity != null;
         String image = mainActivity.getMyImage();
+        double amount = mainActivity.getAmount();
+        String val = String.format("%.0f", amount);
+        mTvSoTien.setText(val+" VNĐ");
         try {
             Picasso.get().load(image).placeholder(R.drawable.ic_user).into(mAvtIv);
         }catch (Exception e){

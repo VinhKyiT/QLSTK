@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     Toast mToast;
     private long backPressTime;
     String id, imageProfile;
+    double amount;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = getIntent();
         id = intent.getStringExtra("id");
         imageProfile = intent.getStringExtra("imageProfile");
+        amount = intent.getDoubleExtra("amount", 0);
     }
 
     @Override
@@ -132,5 +134,8 @@ public class MainActivity extends AppCompatActivity {
     }
     public String getMyImage(){
         return imageProfile;
+    }
+    public double getAmount(){
+        return amount;
     }
 }

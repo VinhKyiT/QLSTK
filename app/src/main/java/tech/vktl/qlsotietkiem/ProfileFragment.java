@@ -118,9 +118,10 @@ public class ProfileFragment extends Fragment {
                         String tel = userObj.getString("dienthoai");
                         String address = userObj.getString("diachi");
                         String imageProfile = userObj.getString("imageProfile");
+                        double amount = userObj.getDouble("amount");
                         if (!idUser.equals("none")){
                             if (idUser.equals(id)){
-                                users.add(new ModelUser(id, user, pass, rights, name, tel, address, imageProfile));
+                                users.add(new ModelUser(id, user, pass, rights, name, tel, address, imageProfile, amount));
                             }
                         }
                     } catch (JSONException e) {
