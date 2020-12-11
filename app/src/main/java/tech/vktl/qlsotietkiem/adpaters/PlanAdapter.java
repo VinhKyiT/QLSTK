@@ -29,6 +29,10 @@ public class PlanAdapter extends RecyclerView.Adapter<PlanAdapter.PlanViewHolder
         notifyDataSetChanged();
     }
 
+    public void setContext(Context context){
+        this.context = context;
+    }
+
     public PlanAdapter() {
     }
 
@@ -55,7 +59,7 @@ public class PlanAdapter extends RecyclerView.Adapter<PlanAdapter.PlanViewHolder
         holder.mItemPlan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(), PlanCreateAct.class);
+                Intent intent = new Intent(context, PlanCreateAct.class);
                 intent.putExtra("resId", mPlans.get(position).getResourceId());
                 context.startActivity(intent);
             }

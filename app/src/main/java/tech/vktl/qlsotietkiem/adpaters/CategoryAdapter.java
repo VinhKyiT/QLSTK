@@ -21,6 +21,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
 
     private Context context;
     private List<ModelCategory> modelCategories;
+    PlanAdapter planAdapter;
 
     public CategoryAdapter(Context context) {
         this.context = context;
@@ -49,7 +50,8 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
         LinearLayoutManager layoutManager = new LinearLayoutManager(context, RecyclerView.HORIZONTAL, false);
         holder.mCategoryRecv.setLayoutManager(layoutManager);
 
-        PlanAdapter planAdapter = new PlanAdapter();
+        planAdapter = new PlanAdapter();
+        planAdapter.setContext(context);
         planAdapter.setData(modelCategory.getPlanList());
         holder.mCategoryRecv.setAdapter(planAdapter);
     }

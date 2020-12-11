@@ -68,7 +68,7 @@ public class NotificationAdapter extends RecyclerView.Adapter<NotificationAdapte
         return notificationList.size();
     }
 
-    class NotiViewHolder extends RecyclerView.ViewHolder{
+    static class NotiViewHolder extends RecyclerView.ViewHolder{
 
         TextView notiTitleTv, notiContentTv, notiDateTv;
         ImageView readStatusIv;
